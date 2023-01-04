@@ -1,0 +1,41 @@
+<div style="margin-left:1150px; margin-top: 0%;">
+    <button (click) = "Save()" class="btn btn-success">ADD</button>
+</div>
+
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+<table class="table">
+    <caption>
+       
+    </caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>description</th>
+            <th>Done</th>
+            <!-- <th>Target Date</th> -->
+            <th>UserName</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let i of todos">
+            <td>{{i.id}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.done}}</td>
+            <!-- <td>{{i.targetDate|date|uppercase}}</td> -->
+            <td>{{i.username}}</td>
+
+            <td><button (click) = "UpdateById(i.id)" class="btn btn-success">Update</button></td>
+            <td><button (click) = "deleteById(i.id)" class="btn btn-danger">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>

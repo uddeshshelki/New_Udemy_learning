@@ -1,0 +1,20 @@
+<div class="alert alert-warning" *ngIf="check.dirty && check.invalid">
+   Enter valid info
+</div>
+<h4 style="text-align: center; color: rgb(248, 172, 29);">Here You can save Or Update Todo</h4>
+
+
+<div class="container">
+  <form (ngSubmit)="!check.invalid && saveUpdate()"   #check = "ngForm">
+    <fieldset class="form-group">
+        <label >description</label>
+    <input [(ngModel)]="todo.description "  type="text" name="descrption" required="required" class="form-control" minlength="6" maxlength="12">
+    </fieldset>
+    <fieldset class="form-group">
+    <label >Username</label>
+    <input  [(ngModel)]="todo.username" type="text" name="username" required="required" class="form-control">
+    </fieldset>
+
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
+</div>

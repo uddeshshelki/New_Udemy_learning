@@ -1,0 +1,15 @@
+<h2>Login !</h2>
+
+<div class="container">
+    <div class="alert alert-warning" *ngIf='errorFlag'>{{errorMsg}}</div>
+    <div>
+        Username: <input type="text" [(ngModel)]='username'>
+        Password: <input type="text" [(ngModel)]='password'>
+
+
+
+        <!-- <input (OnClick)=simplyLogin() type="button" value="Login"> -->
+        <button (click)=simplyLogin() class="btn btn-success">Login</button>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

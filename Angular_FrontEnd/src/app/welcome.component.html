@@ -1,0 +1,18 @@
+<!-- <p>Welcome {{name}} works</p> -->
+
+<div class="container">
+    Hello and welcome
+
+    your error {{errorMessageLog}}
+    <br>
+    <a routerLink="/todos">click here</a>
+</div>
+<br>
+<br>
+Enter value to show : <input type="text" [(ngModel)]='name2'>
+<br>
+<br>
+<div class="container">
+    <button class="btn btn-danger"  (click) = "executeWelcomePathVariable()">Get Welcome</button>
+</div>
+
